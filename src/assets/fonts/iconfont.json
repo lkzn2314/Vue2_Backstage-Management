@@ -6,11 +6,25 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "694786",
+      "name": "baobiao",
+      "font_class": "baobiao",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
       "icon_id": "925312",
       "name": "user",
       "font_class": "user",
       "unicode": "e602",
       "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4801565",
+      "name": "shangpin",
+      "font_class": "shangpin",
+      "unicode": "e619",
+      "unicode_decimal": 58905
     },
     {
       "icon_id": "6664187",
@@ -25,6 +39,27 @@
       "font_class": "password1",
       "unicode": "e734",
       "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "7770334",
+      "name": "tijikongjian",
+      "font_class": "tijikongjian",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "13406546",
+      "name": "danju",
+      "font_class": "danju",
+      "unicode": "e9de",
+      "unicode_decimal": 59870
+    },
+    {
+      "icon_id": "16904149",
+      "name": "danju",
+      "font_class": "danju-tianchong",
+      "unicode": "e637",
+      "unicode_decimal": 58935
     }
   ]
 }
