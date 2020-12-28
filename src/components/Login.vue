@@ -62,7 +62,7 @@
 					const {data:res} =await this.$http.post('login', this.loginForm);
 
 					if(res.meta.status !== 200) return this.$message.error('请求错误!');
-					this.$message.success('请求成功')
+					this.$message.success('登录成功')
 					//1、将登录成功之后的token，保存到sessionStorage中
 						//1.1 项目中除了登录之外的其他API接口，必须在登录之后才能访问
 						//1.2 token只应在网站打开期间生效，所以保存在sessionStorage
