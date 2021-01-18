@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import axios from 'axios'
-//导入element-ui
+//导入element-ui 
 import 'element-ui/lib/theme-chalk/index.css'
 import ElementUI from 'element-ui'
 //导入字体图标
@@ -17,7 +17,7 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 
-//导入NProgress对应的js和css
+//导入NProgress(进度条插件)对应的js和css
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
@@ -25,6 +25,7 @@ Vue.config.productionTip = false
 
 Vue.component('tree-table', TreeTable)
 
+//时间格式过滤器
 Vue.filter('formatDate', function(originVal) {
 	const dt = new Date(originVal)
 	

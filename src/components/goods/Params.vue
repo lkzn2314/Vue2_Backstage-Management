@@ -62,13 +62,13 @@
 								:key="index" closable class="elTag"
 								@close="handleClose(scope.row, index)">{{item}}</el-tag>
 								
-								<!-- 动态编辑标签 -->
 								<el-input size="small" class="input-new-tag" v-if="scope.row.inputVisible"
 								v-model="scope.row.inputValue" ref="saveTagInput" 
 								@keyup.enter.native="handleInputConfirm(scope.row)"
 								@blur="handleInputConfirm(scope.row)">
 								</el-input>
 								<el-button v-else class="button-new-tag" size="small" @click="showInput(scope.row)">+ New Tag</el-button>
+							
 							</template>
 						</el-table-column>
 						
@@ -281,6 +281,7 @@
 			showInput(params) {
 				params.inputVisible = true
 				//$nextTick作用，当页面上的元素被重新渲染之后，才会执行回调函数中的代码
+				//自动获得焦点
 				this.$nextTick(_ => {
 				  this.$refs.saveTagInput.$refs.input.focus()
 				})

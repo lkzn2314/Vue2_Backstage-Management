@@ -11,7 +11,7 @@
 		<el-card>
 			<el-row>
 				<el-col>
-					<el-button type="primary" @click="addGoodsClick">添加商品</el-button>
+					<el-button type="primary" @click="addGoodsClick">添加分类</el-button>
 				</el-col>
 			</el-row>
 			<!-- 表格区 -->
@@ -145,7 +145,7 @@
 				// console.log(res)
 				// console.log(this.cateList)
 			},
-			//添加商品
+			//添加分类按钮
 			addGoodsClick() {
 				this.getParentCateList()
 				this.addCateDialogVisible = true
@@ -179,7 +179,6 @@
 				/* 如果selectedKeys 数组中的length 大于0，证明选中的父级分类
 				反之，就说明没有选中任何父级分类 */
 				if(this.selectedKeys.length > 0) {
-					//
 					this.addCateForm.cat_pid = this.selectedKeys[this.selectedKeys.length - 1]
 					this.addCateForm.cat_level = this.selectedKeys.length
 					return 
@@ -194,8 +193,8 @@
 				 this.$refs.addCateFormRef.validate(async valid => {
 					 if(!valid) return 
 					 const {data: res} = await this.$http.post('categories', this.addCateForm)
-					 if(res.meta.status !== 201) return this.$message.error('添加商品失败')
-					 this.$message.success('添加商品成功')
+					 if(res.meta.status !== 201) return this.$message.error('添加分类失败')
+					 this.$message.success('添加分类成功')
 					 this.getCateList()
 					 this.addCateDialogVisible = false
 				 })

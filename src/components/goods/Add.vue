@@ -88,6 +88,8 @@
 	// import _ from 'lodash'
 	var _ = require('lodash')
 	
+	import {deepCopy} from 'common/utils.js'
+	
 	export default {
 		name: 'Add',
 		data() {
@@ -205,7 +207,10 @@
 				this.$refs.addFormRef.validate(async valid => {
 					if(!valid) return this.$message.error('请准确填入必要项!')
 					//goods_cat处理
-					const form = _.cloneDeep(this.addForm)
+					//分歧点：级联选择器要求的是数组
+					// const form = _.cloneDeep(this.addForm)
+					let form = {}
+					deepCopy(form, this.addForm)
 					form.goods_cat = form.goods_cat.join(',')
 					//动态参数处理
 					this.tabManyData.forEach(item => {

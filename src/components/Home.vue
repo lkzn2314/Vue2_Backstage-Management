@@ -89,7 +89,7 @@
 			toggleClick() {
 				this.isCollapse = !this.isCollapse
 			},
-			//
+			//session保存的目的是：刷新后还能保持状态
 			saveActiveClick(activePath) {
 				window.sessionStorage.setItem('activePath', activePath)
 				this.activePath = activePath
